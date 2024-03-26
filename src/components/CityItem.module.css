@@ -2,6 +2,7 @@
 .cityItem:link,
 .cityItem:visited {
   display: flex;
+  /* justify-content: space-between; */
   gap: 1.6rem;
   align-items: center;
 
