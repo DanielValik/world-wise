@@ -10,7 +10,7 @@ const formatDate = (date) =>
   }).format(new Date(date));
 
 function CityItem({ city }) {
-  const { currentCity } = useCities();
+  const { currentCity, setCurrentCity } = useCities();
 
   return (
     <li>
