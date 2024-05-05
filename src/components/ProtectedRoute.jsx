@@ -3,17 +3,18 @@ import { useAuth } from "../contexts/FakeAuthContext";
 import { useEffect } from "react";
 
 function ProtectedRoute({ children }) {
-  const { isAuthenticated } = useAuth();
+  const { isAutheticated } = useAuth();
   const navigate = useNavigate();
 
   useEffect(
     function () {
-      if (!isAuthenticated) navigate("/");
+      console.log(isAutheticated);
+      if (!isAutheticated) navigate("/");
     },
-    [isAuthenticated, navigate]
+    [isAutheticated, navigate]
   );
 
-  return isAuthenticated ? children : null;
+  return isAutheticated ? children : null;
 }
 
 export default ProtectedRoute;
